@@ -14,7 +14,114 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      projects: {
+        Row: {
+          category: string
+          created_at: string | null
+          display_order: number | null
+          featured: boolean | null
+          id: string
+          thumbnail: string
+          title_ar: string
+          title_en: string
+          type: string
+          video_url: string | null
+          vimeo_id: string | null
+          visible: boolean | null
+        }
+        Insert: {
+          category?: string
+          created_at?: string | null
+          display_order?: number | null
+          featured?: boolean | null
+          id?: string
+          thumbnail?: string
+          title_ar: string
+          title_en: string
+          type?: string
+          video_url?: string | null
+          vimeo_id?: string | null
+          visible?: boolean | null
+        }
+        Update: {
+          category?: string
+          created_at?: string | null
+          display_order?: number | null
+          featured?: boolean | null
+          id?: string
+          thumbnail?: string
+          title_ar?: string
+          title_en?: string
+          type?: string
+          video_url?: string | null
+          vimeo_id?: string | null
+          visible?: boolean | null
+        }
+        Relationships: []
+      }
+      requests: {
+        Row: {
+          created_at: string | null
+          details: string | null
+          email: string
+          event_date: string | null
+          full_name: string
+          id: string
+          location: string | null
+          organization: string
+          phone: string
+          service_type: string
+          status: string | null
+        }
+        Insert: {
+          created_at?: string | null
+          details?: string | null
+          email: string
+          event_date?: string | null
+          full_name: string
+          id?: string
+          location?: string | null
+          organization: string
+          phone: string
+          service_type: string
+          status?: string | null
+        }
+        Update: {
+          created_at?: string | null
+          details?: string | null
+          email?: string
+          event_date?: string | null
+          full_name?: string
+          id?: string
+          location?: string | null
+          organization?: string
+          phone?: string
+          service_type?: string
+          status?: string | null
+        }
+        Relationships: []
+      }
+      settings: {
+        Row: {
+          id: string
+          key: string
+          updated_at: string | null
+          value: string
+        }
+        Insert: {
+          id?: string
+          key: string
+          updated_at?: string | null
+          value: string
+        }
+        Update: {
+          id?: string
+          key?: string
+          updated_at?: string | null
+          value?: string
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
